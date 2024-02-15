@@ -14,21 +14,33 @@ function handleKeyboardKeyUpEvent(event){
     const currentAlphabetElement = document.getElementById('current-alphabet');
     const currentAlphabet = currentAlphabetElement.innerText;
     const expectedAlphabet = currentAlphabet.toLocaleLowerCase();
-    console.log(playerPressed, expectedAlphabet);
+   
 
     //chk match or not
     if(playerPressed == expectedAlphabet){
-        console.log('got point');
+        //update score
+        const currentScoreElement = document.getElementById('current-score');
+        const currentScoreText = currentScoreElement.innerText;
+        const currentScore = parseInt(currentScoreText);
+        const newScore = currentScore + 1;
+        currentScoreElement.innerText = newScore;
+        //start a new round
+        removeBackgroundColorById(expectedAlphabet);
+        continueGame();
     }
     else{
-        console.log('lost a life');
+        const currentLifeElement = document.getElementById('current-life');
+        const currentLifeText = currentLifeElement.innerText;
+        const currentLife = parseInt(currentLifeText);
+        const remainingLife = currentLife - 1;
+        currentLifeElement.innerText = remainingLife;
     }
 }
 document.addEventListener('keyup', handleKeyboardKeyUpEvent);
 function continueGame(){
     //generate a random alphabet
     const alphabet = getARandomAlphabet();
-    console.log(alphabet);
+    //console.log(alphabet);
 
     //set alphabet
     const currentAlphabetElement = document.getElementById('current-alphabet');
