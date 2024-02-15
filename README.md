@@ -2,4 +2,3 @@
 
 Live Link: https://tazim5032.github.io/alpha-clash-pro/
 
-Netlify Live Link: https://lovely-tapioca-9ed659.netlify.app/
