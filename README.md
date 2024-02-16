@@ -2,5 +2,5 @@
 
 Live Link: https://tazim5032.github.io/alpha-clash-pro/ 
 
-#use laptop or pc keyboard to play
+# use laptop or pc keyboard to play
 
